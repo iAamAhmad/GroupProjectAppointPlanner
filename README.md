@@ -4,7 +4,7 @@ Welcome to our Appointment Planner project! This project was completed as a chal
 
 ## Team Members
 - [Muhammad Ahmad](https://github.com/iAamAhmad)
-- [Muhammad Talha](https://github.com/muhammad-talha)
+- [Muhammad Talha](https://github.com/tp92-chaudhary)
 - [Aiena Laraib](https://github.com/Aeina852096)
 - [Ambreen](https://github.com/shakrullahanbreen)
 - [Asad Ali](https://github.com/AsadJFSD)
