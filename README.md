@@ -16,10 +16,6 @@ Our Appointment Planner with Doctor project is a web application designed to hel
 ## Technologies Used
 - React.js
 - Tailwind CSS
-- React Redux
-- Express
-- Node.js
-- Database MongoDB
 
 ## Project Features
 - User-friendly interface for patients to book appointments.
