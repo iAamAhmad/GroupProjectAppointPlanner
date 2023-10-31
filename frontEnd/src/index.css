@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
   background-image: url("https://img.freepik.com/free-photo/stethoscope-copy-space_23-2147652347.jpg?w=740&t=st=1698727224~exp=1698727824~hmac=641de60ecc37327ce9b0a5e6de5c34cc08f4e8854d033ea2c8902fc601678bf5"),
     linear-gradient(rgba(32, 32, 32, 0.5), rgba(0, 0, 0, 0.5));
