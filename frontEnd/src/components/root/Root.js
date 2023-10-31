@@ -1,23 +1,24 @@
-import {  Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 export const ROUTES = {
     CONTACTS: "/contacts",
     APPOINTMENTS: "/appointments",
-  };
+};
 
 function Root() {
     return (
-        <>
-            <nav>
+        <div>
+            <h1 className="text-3xl mb-7 text-white">Book Your Appointment</h1>
+            <nav className="bg-slate-600 rounded-lg ">
                 <NavLink to={ROUTES.CONTACTS} >
-                Contacts
+                    Contacts
                 </NavLink>
                 <NavLink to={ROUTES.APPOINTMENTS} >
-                Appointments
+                    Appointments
                 </NavLink>
             </nav>
-            <Outlet/>
-      </>
+            <Outlet />
+        </div>
     );
 
 }

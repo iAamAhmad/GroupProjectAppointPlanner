@@ -31,8 +31,8 @@ export const ContactForm = ({
           onChange={(e) => setPhone(e.target.value)}
           required
           // regex is for US phone numbers
-          pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
-          placeholder="Contact Phone (###-###-####)"
+          pattern="(\+92|0|92)?[1-9]\d{9}"
+          placeholder="Contact Phone (####-#######)"
           aria-label="Contact Phone"
         />
       </label>
@@ -49,7 +49,7 @@ export const ContactForm = ({
         />
       </label>
       <br />
-      <input type="submit" value="Add Contact" aria-label="Add Contact"/>
+      <input type="submit" value="Add Contact" aria-label="Add Contact" />
     </form>
   );
 };

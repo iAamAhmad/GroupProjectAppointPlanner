@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("https://img.freepik.com/free-photo/stethoscope-copy-space_23-2147652347.jpg?w=740&t=st=1698727224~exp=1698727824~hmac=641de60ecc37327ce9b0a5e6de5c34cc08f4e8854d033ea2c8902fc601678bf5"),
+    linear-gradient(rgba(32, 32, 32, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+  background-size: cover;
+}
 #root {
   padding: 30px;
   font-family: "Open Sans", sans-serif;
@@ -5,10 +15,9 @@
 
 nav > a {
   font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  color: #000000;
-  margin-right: 30.5px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
   text-decoration-line: none;
 }
 
@@ -17,16 +26,24 @@ nav > a.active {
 }
 
 nav {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #979797;
-  margin-bottom: 20px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  background-image: linear-gradient(
+    to right,
+    #a1c4fd 0%,
+    #b0b6b9 51%,
+    #9a9b9e 100%
+  );
 }
 
 h2 {
   font-weight: bold;
   font-size: 18px;
-  color: #000000;
-  margin: 0;
+  color: white;
+  margin-top: 7px;
   margin-bottom: 18px;
 }
 
@@ -37,18 +54,25 @@ hr {
   border: none;
   border-top: 1px solid #979797;
   margin: 20px 0;
+  width: 60%;
 }
 
 input[type="submit"] {
-  background: #03a8d8;
+  background: rgb(46, 38, 95);
   border-radius: 4px;
-  color: #ffffff;
+  color: white;
   font-weight: bold;
   font-size: 14px;
   border: none;
   outline: none;
-  padding: 10px 0;
-  width: 100%;
+  padding: 12px 0;
+  background-image: linear-gradient(
+    to right,
+    #a1c4fd 0%,
+    #b0b6b9 51%,
+    #9a9b9e 100%
+  );
+  width: 60%;
   font-family: "Open Sans", sans-serif;
   margin-top: 10px;
   margin-bottom: 0px;
@@ -62,11 +86,11 @@ input,
 select {
   font-family: "Open Sans", sans-serif;
   background: #ffffff;
-  border: 1px solid #979797;
+  border: 1px solid #555252;
   border-radius: 4px;
   padding: 7px 9.5px 9px 9.5px;
   outline: none;
-  width: 100%;
+  width: 60%;
   margin-bottom: 10px;
   box-sizing: border-box;
 }
