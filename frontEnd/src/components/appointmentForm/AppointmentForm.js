@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 
 import { ContactPicker } from "../contactPicker/ContactPicker";
+import { useSelector } from "react-redux";
 
 const getTodayString = () => {
   const [month, day, year] = new Date()
@@ -10,7 +11,6 @@ const getTodayString = () => {
 };
 
 export const AppointmentForm = ({
-  contacts,
   name,
   setTitle,
   contact,
@@ -21,7 +21,7 @@ export const AppointmentForm = ({
   setTime,
   handleSubmit
 }) => {
-
+  const contacts = useSelector((state) => state.contacts);
   const contactNames = useMemo(() => {
     return contacts.map((contact) => contact.name);
   }, [contacts]);

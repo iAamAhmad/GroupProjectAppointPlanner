@@ -1,18 +1,25 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 
 import { ContactForm } from "../../components/contactForm/ContactForm";
 import { TileList } from "../../components/tileList/TileList";
+import { addContact } from "../../redux/contactSlice";
 
-export const ContactsPage = ({ contacts, addContact }) => {
+export const ContactsPage = () => {
+  const contacts = useSelector((state) => state.contacts);
+  const dispatch = useDispatch();
+
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [duplicate, setDuplicate] = useState(false);
+  let isDuplicate;
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!duplicate) {
-      addContact(name, phone, email);
+    if (!isDuplicate) {
+      dispatch(addContact({ name, phone, email }));
       setName("");
       setPhone("");
       setEmail("");
@@ -20,27 +27,16 @@ export const ContactsPage = ({ contacts, addContact }) => {
   };
 
   useEffect(() => {
-    const nameIsDuplicate = () => {
-      const found = contacts.find((contact) => contact.name === name);
-      if (found !== undefined) {
-        return true;
-      }
-      return false;
-    };
+    isDuplicate = contacts.some(contact => contact.name === name);
+  }, [])
 
-    if (nameIsDuplicate()) {
-      setDuplicate(true);
-    } else {
-      setDuplicate(false);
-    }
-  }, [name, contacts, duplicate]);
 
   return (
     <>
       <section>
         <h2>
           Add Contact
-          {duplicate ? " - Name Already Exists" : ""}
+          {isDuplicate ? " - Name Already Exists" : ""}
         </h2>
         <ContactForm
           name={name}
